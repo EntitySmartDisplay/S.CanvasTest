@@ -7,7 +7,7 @@
  * MIT Licensed.
  */
 
-Module.register("ManCutTwoBlock",{
+Module.register("Picture",{
 		// Default module config.
 		defaults: {
                                 frameWidth: "1500",
@@ -36,7 +36,7 @@ resume: function() {
 },
         getStyles: function() {
                 return [
-                        "MMM-iFrame.css",
+                        "Picture.css",
                 ];
         },
 
