@@ -27,7 +27,7 @@ var config = {
 	units: "metric",
 
 	modules: [
-	/*	{
+		{
 			module: "Picture",
 			position: "top_left",	// This can be any of the regions.
 			visible : "ture",
@@ -41,7 +41,6 @@ var config = {
 					hidden : "false"
 			}
 		},
-		*/
 		{
 			module: "clock",
 			position: "bottom_left",
@@ -49,32 +48,33 @@ var config = {
 				display:"none", 
 			}
 		},
-		{
-			module: "newsfeed",
-			position: "bottom_center",
-			config: {
-			feeds: 
-				[{
-				title: "사회 , 경제  ",
-				url: "http://media.daum.net/rss/part/primary/entertain/rss2.xml" 
-				},
-				{
-				title: "스포츠  ",
-				url: "http://media.daum.net/rss/today/primary/sports/rss2.xml" 
-				},
-				{
-				title: "연예  ",
-				url: "http://api.sbs.co.kr/xml/news/rss.jsp?pmDiv=entertainment" 
-				},
-				{
-				title: "IT , 과학  ",
-				url: "http://media.daum.net/rss/part/primary/digital/rss2.xml" 
-				},
-				],
-				showSourceTitle: true,
-				showPublishDate: true,
+	{
+		module: "newsfeed",
+		position: "bottom_center",
+		config: {
+		feeds: 
+			[{
+			title: "사회 , 경제  ",
+			url: "http://media.daum.net/rss/part/primary/entertain/rss2.xml" 
+			},
+			{
+			title: "스포츠  ",
+			url: "http://media.daum.net/rss/today/primary/sports/rss2.xml" 
+			},
+			{
+			title: "연예  ",
+			url: "http://api.sbs.co.kr/xml/news/rss.jsp?pmDiv=entertainment" 
+			},
+			{
+			title: "IT , 과학  ",
+			url: "http://media.daum.net/rss/part/primary/digital/rss2.xml" 
+			},
+			],
+			showSourceTitle: true,
+			showPublishDate: false
 			}
 		},
+
 		{
 			module: "alert",
 		},
@@ -82,7 +82,15 @@ var config = {
 			module: "compliments",
 			position: "lower_third"
 		},
-		
+		{
+			module:"CHANGE_CLOCK"
+		},
+		{
+			module:"CHANGE_WEATHER"
+		},
+		{
+			module:"CHANGE_NEWSFEED"
+		},
 		
 			
 	]
