@@ -20,8 +20,13 @@
   },
   "homepage": "https://github.com/alberttwong/MMM-iFrame#readme",
   "dependencies": {
-    "request": "latest",
+    "body-parser": "latest",
     "express": "latest",
-    "body-parser" : "latest"
-    }
+    "pandas": "0.0.3",
+    "php": "^1.0.1",
+    "pip": "0.0.1",
+    "pymysql": "^1.0.0",
+    "request": "latest",
+    "python-shell": "latest"
+  }
 }

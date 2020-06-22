@@ -1,12 +1,3 @@
-/* global Module */
-
-/* Magic Mirror
- * Module: iFrame
- *
- * By Ben Williams http://desertblade.com
- * MIT Licensed.
- */
-
 Module.register("Picture",{
 		// Default module config.
 		defaults: {
@@ -14,22 +5,52 @@ Module.register("Picture",{
 				width:"100%",
                                 updateInterval: 0.5 * 60 * 1000,
                                 url: ["http://s3.us-east-2.amazonaws.com/beautymirror.com/demo/index.html"],
-                                scrolling: "yes"
-		},
-
+                                scrolling: "yes",
+                },
+        
         start: function () {
-                self = this;
+                Picture = this;
+                this.sendSocketNotification("URL")
                 var count = 0;
                 if (this.config.url.length > 0 ) {
-                      setInterval( function () { 
-                         self.updateDom(1000);
-                         console.log('update' + count++)
-                         }, this.config.updateInterval);
+                        setInterval( function () { 
+                        Picture.updateDom(100);
+                                Picture.sendSocketNotification("URL") 
+                                console.log('update' + count++) 
+                        }, this.config.updateInterval);
+                        this.updateDom()
                 }
-	},
+        },
+        socketNotificationReceived: function(notification, payload) {
+                switch(notification) {
+                case "RESULT URL":
+                        console.log("payload what "+this.config.url)
+                        console.log("payload what "+payload)
+                        var payload1;
+                        payload1 = payload.toString()
+                        
+                        if (this.config.url != payload1){
+                                payload1=payload.toString();
+                                console.log("payload what akdakd "+payload[0])
+                                console.log("payload what akdakd "+this.config.url)
+                                this.config.url=[payload1]
+                                console.log("payload what akdakd "+payload[0])
+                                console.log("payload what akdakd "+this.config.url)
+                                this.updateDom()
+                        }
+                        else 
+                        console.log('의진이')
+                }
+                
+        },   
+        
+
+        
   getRandomInt: function (min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   },
+
+  
 resume: function() {
    console.log("Resuming");
    return this.getDom();
@@ -39,7 +60,6 @@ resume: function() {
                         "Picture.css",
                 ];
         },
-
         // Override dom generator.
 	getDom: function() {
                 var { width, height } = this.config;
@@ -47,7 +67,6 @@ resume: function() {
                 
                 wrapper.className = "mmm-iframe"
                 wrapper.style.width = `${this.config.frameWidth}px`;
-
                 var html = `
                         <div class="mmm-iframe-wrapper" style="padding-top: ${100 / (width / height)}%;">
                                 <iframe
@@ -57,7 +76,10 @@ resume: function() {
                                         scrolling="${this.config.scrolling}"
                                 ></iframe>
                         </div>
+                        
                 `;
+
+
 
                 wrapper.insertAdjacentHTML("afterbegin", html);
 
