@@ -57,15 +57,18 @@ Module.register("MMM-Testpython", {
 	}
 	else {
 
-        var temperature = payload3[0];
+        var temperature = payload3[1];
         console.log("Socket recevied 1: " + temperature);
-        var humidity = payload3[1];
+        var humidity = payload3[0];
         console.log("Socket recevied 1: " + humidity);
+
+
 
         elemk.innerHTML = "온도 : " + temperature + "도";
         elemk2.innerHTML = "습도 : " + humidity + "%";
-	} 
-      break
+
+	}
+
     }
   }
 })
