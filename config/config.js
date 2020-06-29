@@ -42,11 +42,29 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-Testpython",
+			position: "bottom_left",
+			config:{
+					url: [""],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 100, // rotate URLs every 30 seconds
+			}
+			
+		},
+		{
+			module: "currentweather",
+			position: "bottom_right",
+			header: "    오늘의 날씨",
+			config: {
+				location: "Seoul",
+				locationID: "1835847",  // vb    ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
+				appid: "f167f10ed5044b1a287054c8ccfb6730",                            
+			}
+		},
+		{
 			module: "clock",
 			position: "bottom_right",
 
 		},
-
 		{
 			module: "newsfeed",
 			position: "bottom_left",
@@ -74,16 +92,6 @@ var config = {
 				showPublishDate: false,
 				}
 		},
-		{	
-			module: "currentweather",
-			position: "bottom_right",
-			header: "    오늘의 날씨",
-			config: {
-				location: "Seoul",
-				locationID: "1835847",  // vb    ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
-				appid: "f167f10ed5044b1a287054c8ccfb6730",                            
-			}
-		},
 		{
 			module:"CHANGE_CLOCK"
 		},
@@ -98,10 +106,11 @@ var config = {
 			position: "lower_third",	
 			config: {
 				video_id: "DN1GACKSuXQ",
-				searchlist1: "베이징",
+				searchlist1: "",
 				loop: true
 			}
 		},*/
+<<<<<<< HEAD
 		{
 			module: "MMM-Testpython",
 			position: "bottom_right",
@@ -111,6 +120,9 @@ var config = {
 			}
 			
 		},
+=======
+
+>>>>>>> 7ffd4bc50511deeca3066d56c3eafafac2c0a55a
 
 		
 			

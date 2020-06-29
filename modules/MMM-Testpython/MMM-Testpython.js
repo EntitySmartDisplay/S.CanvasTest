@@ -29,7 +29,7 @@ Module.register("MMM-Testpython", {
     var Temp = document.createElement("p")
     Temp.innerHTML = "온도 : "
     Temp.id = "clickid1"
-    Temp.className = "click"
+    Temp.className = "showage"
     Temp.style.fontSize = "2em"
     element.appendChild(Temp)
     var Temp2 = document.createElement("p")
@@ -53,15 +53,15 @@ Module.register("MMM-Testpython", {
         var elemk2 = document.getElementById("showage");
 
 	if (payload3[0] === "NAN"){
-		
-	}
 
+	}
 	else {
 
         var temperature = payload3[1];
         console.log("Socket recevied 1: " + temperature);
         var humidity = payload3[0];
         console.log("Socket recevied 1: " + humidity);
+<<<<<<< HEAD
 
 
 
@@ -73,8 +73,17 @@ Module.register("MMM-Testpython", {
 
         
           
+=======
+
+        elemk.innerHTML = "온도 : " + temperature + "도";
+        elemk2.innerHTML = "습도 : " + humidity + "%";
+	} 
+>>>>>>> 7ffd4bc50511deeca3066d56c3eafafac2c0a55a
       break
     }
   }
 })
+
+
+
 
