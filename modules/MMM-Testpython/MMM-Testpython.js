@@ -53,31 +53,18 @@ Module.register("MMM-Testpython", {
         var elemk2 = document.getElementById("showage");
 
 	if (payload3[0] === "NAN"){
-		
+    
 	}
-
 	else {
 
         var temperature = payload3[0];
         console.log("Socket recevied 1: " + temperature);
         var humidity = payload3[1];
         console.log("Socket recevied 1: " + humidity);
-<<<<<<< HEAD
-
-
 
         elemk.innerHTML = "온도 : " + temperature + "도";
         elemk2.innerHTML = "습도 : " + humidity + "%";
-
-	}
-=======
-        
-        elemk.innerHTML = "온도 : " + temperature
-        elemk2.innerHTML = "습도 : " + humidity
->>>>>>> 3f231469ab4bad13506151a57887f17674ebd132
-
-        
-          
+	} 
       break
     }
   }
