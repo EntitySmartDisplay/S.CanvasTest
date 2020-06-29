@@ -1,15 +1,3 @@
-"""
-import serial
-
-ser = serial.Serial()
-ser.baudrate = 9600
-ser.port = 'COM1'
-ser.open()
-exp.ser = serial.Serial('COM1', baudrate=9600, timeout = None)
-print(exp.ser)
-
-
-"""
 import serial
 
 port = 'COM5'

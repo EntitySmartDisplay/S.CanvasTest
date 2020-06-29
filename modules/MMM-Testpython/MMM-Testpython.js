@@ -29,7 +29,7 @@ Module.register("MMM-Testpython", {
     var Temp = document.createElement("p")
     Temp.innerHTML = "온도 : "
     Temp.id = "clickid1"
-    Temp.className = "click"
+    Temp.className = "showage"
     Temp.style.fontSize = "2em"
     element.appendChild(Temp)
     var Temp2 = document.createElement("p")
@@ -53,7 +53,7 @@ Module.register("MMM-Testpython", {
         var elemk2 = document.getElementById("showage");
 
 	if (payload3[0] === "NAN"){
-    
+
 	}
 	else {
 
@@ -69,4 +69,7 @@ Module.register("MMM-Testpython", {
     }
   }
 })
+
+
+
 
