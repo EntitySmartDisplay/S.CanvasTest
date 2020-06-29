@@ -9,7 +9,7 @@ Module.register("MMM-Testpython", {
         if (this.config.url.length > 0 ) {
                 setInterval( function () { 
                 Picture.updateDom(100);
-                        Picture.sendSocketNotification("URL") 
+                        Picture.sendSocketNotification("TEST") 
                         console.log('update' + count++) 
                 }, this.config.updateInterval);
                 this.updateDom()
