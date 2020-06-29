@@ -54,6 +54,7 @@ Module.register("MMM-Testpython", {
         console.log("Socket recevied 1: " + temperature);
         var humidity = payload3[1];
         console.log("Socket recevied 1: " + humidity);
+        
         elemk.innerHTML = "온도 : " + temperature
         elemk2.innerHTML = "습도 : " + humidity
 
