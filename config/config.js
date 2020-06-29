@@ -110,19 +110,7 @@ var config = {
 				loop: true
 			}
 		},*/
-<<<<<<< HEAD
-		{
-			module: "MMM-Testpython",
-			position: "bottom_right",
-			config:{
-					url: [""],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0.5 * 60 * 100, // rotate URLs every 30 seconds
-			}
-			
-		},
-=======
 
->>>>>>> 7ffd4bc50511deeca3066d56c3eafafac2c0a55a
 
 		
 			

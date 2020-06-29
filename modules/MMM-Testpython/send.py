@@ -1,6 +1,6 @@
-
 import serial
 import re
+import pymysql
 
 port = 'COM5'
 brate = 9600 #boudrate
@@ -17,7 +17,6 @@ while a:
     if seri.in_waiting != 0 :
         content = seri.readline()
         #print(content)
-
 
         re_content = str(content)
         re_content2 = re_content.replace("b","")

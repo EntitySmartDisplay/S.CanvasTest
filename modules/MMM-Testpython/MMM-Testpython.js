@@ -61,7 +61,6 @@ Module.register("MMM-Testpython", {
         console.log("Socket recevied 1: " + temperature);
         var humidity = payload3[0];
         console.log("Socket recevied 1: " + humidity);
-<<<<<<< HEAD
 
 
 
@@ -70,16 +69,6 @@ Module.register("MMM-Testpython", {
 
 	}
 
-
-        
-          
-=======
-
-        elemk.innerHTML = "온도 : " + temperature + "도";
-        elemk2.innerHTML = "습도 : " + humidity + "%";
-	} 
->>>>>>> 7ffd4bc50511deeca3066d56c3eafafac2c0a55a
-      break
     }
   }
 })
