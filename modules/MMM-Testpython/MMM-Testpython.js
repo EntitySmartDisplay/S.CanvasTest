@@ -1,15 +1,16 @@
-var Testpythons;
+﻿var Testpythons;
 Module.register("MMM-Testpython", {
 
-    defaults: {},
+    defaults: {
+	             updateInterval: 0.5 * 60 * 1000,
+    },
     start: function (){
         Testpythons = this;
         this.sendSocketNotification("TEST")
         var count = 0;
         if (this.config.url.length > 0 ) {
                 setInterval( function () { 
-                Picture.updateDom(100);
-                        Picture.sendSocketNotification("TEST") 
+                        Testpythons.sendSocketNotification("TEST") 
                         console.log('update' + count++) 
                 }, this.config.updateInterval);
                 this.updateDom()
@@ -21,16 +22,16 @@ Module.register("MMM-Testpython", {
 
   getDom: function() {
     
-    var Temp = document.createElement("div")
-    Temp.className = "myContent"
-    Temp.id="divid1"
-    Temp.font = 4
-    var Temp2 = document.createElement("p")
+    var element = document.createElement("div")
+    element.className = "myContent"
+    element.id="divid1"
+    element.font = 4
+    var Temp = document.createElement("p")
     Temp.innerHTML = "온도 : "
     Temp.id = "clickid1"
     Temp.className = "click"
     Temp.style.fontSize = "2em"
-    Temp.appendChild(Temp)
+    element.appendChild(Temp)
     var Temp2 = document.createElement("p")
     Temp2.innerHTML = "습도 : "
     Temp2.id = "showage"
@@ -38,7 +39,7 @@ Module.register("MMM-Testpython", {
     Temp2.style.fontSize = "2em"
     element.appendChild(Temp2)
     
-    return Temp
+    return element
     },
     
   socketNotificationReceived: function(notification, payload) {
@@ -50,12 +51,24 @@ Module.register("MMM-Testpython", {
         console.log("Socket recevied 1: " + payload3);
         var elemk = document.getElementById("clickid1")
         var elemk2 = document.getElementById("showage");
+
+	if (payload3[0] === "NAN"){
+		
+	}
+
+	else {
+
         var temperature = payload3[0];
         console.log("Socket recevied 1: " + temperature);
         var humidity = payload3[1];
         console.log("Socket recevied 1: " + humidity);
-        elemk.innerHTML = "온도 : " + temperature
-        elemk2.innerHTML = "습도 : " + humidity
+
+
+
+        elemk.innerHTML = "온도 : " + temperature + "도";
+        elemk2.innerHTML = "습도 : " + humidity + "%";
+
+	}
 
         
           
