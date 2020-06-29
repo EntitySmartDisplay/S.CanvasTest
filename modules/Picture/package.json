@@ -26,7 +26,7 @@
     "php": "^1.0.1",
     "pip": "0.0.1",
     "pymysql": "^1.0.0",
-    "request": "latest",
-    "python-shell": "latest"
+    "python-shell": "latest",
+    "request": "latest"
   }
 }

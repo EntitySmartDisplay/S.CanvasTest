@@ -34,7 +34,7 @@ var config = {
 			config: {
 				// See "Configuration options" for more information.
 					url: [""],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					updateInterval: 0.5 * 6 * 100, // rotate URLs every 30 seconds
 					width: "1060", // width of iframe
 					height: "1414", // height of iframe
 					frameWidth: "1060", // width of embedded iframe, height is beeing calculated by aspect ratio of iframe		
