@@ -40,8 +40,7 @@ Module.register("Picture",{
                         }
                         else 
                         console.log('의진이')
-                }
-                
+                }  
         },   
         
 

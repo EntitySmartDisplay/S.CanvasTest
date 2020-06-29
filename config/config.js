@@ -80,7 +80,7 @@ var config = {
 			header: "    오늘의 날씨",
 			config: {
 				location: "Seoul",
-				locationID: "1835847",  //ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
+				locationID: "1835847",  // vb    ID from http://bulk.openweathermap.org/sample/; unzip the gz file and find your city
 				appid: "f167f10ed5044b1a287054c8ccfb6730",                            
 			}
 		},
@@ -93,6 +93,15 @@ var config = {
 		{
 			module:"CHANGE_NEWSFEED"
 		},
+		/*{
+			module: "MMM-EmbedYoutube1",  //28
+			position: "lower_third",	
+			config: {
+				video_id: "DN1GACKSuXQ",
+				searchlist1: "베이징",
+				loop: true
+			}
+		},*/
 
 
 		
