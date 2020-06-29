@@ -102,7 +102,13 @@ var config = {
 				loop: true
 			}
 		},*/
-
+		{
+			module: "MMM-Testpython",
+			position: "lower_third",
+			config:{
+			}
+			
+		},
 
 		
 			

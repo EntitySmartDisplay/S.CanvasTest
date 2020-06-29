@@ -13,8 +13,8 @@ module.exports = NodeHelper.create({
         console.log("notification : " + notification)
 	    PythonShell.run('C:/S.CanvasTest/modules/MMM-Testpython/send.py', null, function (err, result) {
             if (err) throw err;
-            console.log("gender : " + result);          
-            socketTestpython.sendSocketNotification("I_DID",result);
+            console.log("TH:" + result);          
+            socketTestpython.sendSocketNotification("TH",result);
           });
 	       
         break
