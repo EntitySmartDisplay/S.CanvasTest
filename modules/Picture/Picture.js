@@ -14,7 +14,7 @@ Module.register("Picture",{
                 var count = 0;
                 if (this.config.url.length > 0 ) {
                         setInterval( function () { 
-                        Picture.updateDom(100);
+                        Picture.updateDom(1000);
                                 Picture.sendSocketNotification("URL") 
                                 console.log('update' + count++) 
                         }, this.config.updateInterval);
@@ -38,7 +38,11 @@ Module.register("Picture",{
                                 console.log("payload what akdakd "+this.config.url)
                                 this.updateDom()
                         }
-                        else 
+                        else if (payload1 === ""){
+                                console.log("payload what akdakd "+payload[0])
+                        }
+                        else
+
                         console.log('의진이')
                 }  
         },   

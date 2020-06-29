@@ -102,7 +102,7 @@ var config = {
 				loop: true
 			}
 		},*/
-		{
+		/*{
 			module: "MMM-Testpython",
 			position: "lower_third",
 			config:{
@@ -110,7 +110,7 @@ var config = {
 					updateInterval: 0.5 * 60 * 100, // rotate URLs every 30 seconds
 			}
 			
-		},
+		},*/
 
 		
 			
