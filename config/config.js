@@ -41,7 +41,7 @@ var config = {
 					hidden : "false"
 			}
 		},
-		/*{
+		{
 			module: "MMM-Testpython",
 			position: "bottom_left",
 			config:{
@@ -49,7 +49,7 @@ var config = {
 					updateInterval: 0.5 * 60 * 100, // rotate URLs every 30 seconds
 			}
 			
-		},*/
+		},
 		{
 			module: "currentweather",
 			position: "bottom_right",
