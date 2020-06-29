@@ -14,11 +14,10 @@ Module.register("Picture",{
                 var count = 0;
                 if (this.config.url.length > 0 ) {
                         setInterval( function () { 
-                        Picture.updateDom(1000);
+                        Picture.updateDom(5000);
                                 Picture.sendSocketNotification("URL") 
                                 console.log('update' + count++) 
                         }, this.config.updateInterval);
-                        this.updateDom()
                 }
         },
         socketNotificationReceived: function(notification, payload) {
@@ -33,16 +32,18 @@ Module.register("Picture",{
                                 payload1=payload.toString();
                                 console.log("payload what akdakd "+payload[0])
                                 console.log("payload what akdakd "+this.config.url)
-                                this.config.url=[payload1]
-                                console.log("payload what akdakd "+payload[0])
+                        
+                                
+                                this.config.url=[payload1];
+                                
+                                console.log("payload what akdakd "+payload1)
                                 console.log("payload what akdakd "+this.config.url)
-                                this.updateDom()
+                                
                         }
                         else if (payload1 === ""){
                                 console.log("payload what akdakd "+payload[0])
                         }
                         else
-
                         console.log('의진이')
                 }  
         },   
