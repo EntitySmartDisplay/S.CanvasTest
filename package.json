@@ -63,7 +63,7 @@
     "feedme": "latest",
     "helmet": "^3.9.0",
     "iconv-lite": "^0.6.0",
-    "mocha-logger": "^1.0.5",
+    "mocha-logger": "^1.0.8",
     "moment": "latest",
     "mysql": "github:mysqljs/mysql",
     "pandas": "0.0.3",
